@@ -14,6 +14,7 @@ import Cart from "./pages/Cart";
 import TermsOfServices from "./pages/TermsOfServices";
 import RefundPolicy from "./pages/RefundPolicy";
 import PrivacyPolice from "./pages/PrivacyPolice";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/terms-of-service" element={<TermsOfServices />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolice />} />
+          <Route path="/product-detail" element={<ProductDetails />} />
         </Routes>
       </BrowserRouter>
     </>
