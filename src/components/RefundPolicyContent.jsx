@@ -25,18 +25,20 @@ const RefundPolicyContent = () => {
   ];
 
   return (
-    <div className="font-oswald wid40 m-auto pt-5">
-      <h1 className="text-5xl text-center font-semibold">Refund policy</h1>
-      <div className="pt-10 pb-10">
-        {FaqQuestion.map((qus, ans) => (
-          <div className="Avenir">
-            <p className="font-bold pt-6">{qus.qus}</p>
-            <p className="pt-6">{qus.ans}</p>
+    <div className="font-oswald max-w-4xl m-auto px-4 pt-5 md:px-8 lg:px-16">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-semibold">Refund Policy</h1>
+      <div className="pt-8 pb-10">
+        {FaqQuestion.map((item, index) => (
+          <div key={index} className="Avenir">
+            <p className="font-bold text-lg md:text-xl pt-6">{item.qus}</p>
+            <p className="text-base md:text-lg pt-4 text-gray-700">{item.ans}</p>
           </div>
         ))}
       </div>
     </div>
-  )
+  );
+  
+  
 }
 
 export default RefundPolicyContent

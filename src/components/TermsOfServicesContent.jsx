@@ -1,5 +1,5 @@
 import React from "react";
-import '../index.css'
+import "../index.css";
 
 const TermsOfServicesContent = () => {
   const termsContent = [
@@ -91,24 +91,24 @@ const TermsOfServicesContent = () => {
     },
   ];
   return (
-    <div className="wid40 m-auto ">
-      <div className="w-full m-auto">
-        <h1 className="font-oswald text-5xl text-center font-semibold">Terms Of Service</h1>
-        <div className="pt-20 pb-10">
-          {termsContent.map((section, index) => (
-            <div key={index} className="pt-8 font-Montserrat">
-              <p className="text-gray-600 text-xl font-extrabold pt-1">{section.sections}</p>
-              <p className="pt-2">
-                {section.ans.split("\n").map((line, i) => (
-                  <span className="text-gray-600 leading-normal pt-5 text-sm font-semibold" key={i}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-              </p>
-            </div>
-          ))}
-        </div>
+    <div className="font-oswald  container mx-auto p-4 md:p-8  lg:px-16">
+      <h1 className="text-5xl lg:text-4xl font-bold text-center mb-6 lg:mb-8">
+        Terms of Service
+      </h1>
+      <div className="flex flex-col gap-4">
+        {termsContent.map((term, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-md rounded-lg p-4 md:p-6 lg:p-8"
+          >
+            <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">
+              {term.sections}
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-gray-700 whitespace-pre-line">
+              {term.ans}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
