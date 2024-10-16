@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Subscribe from "../components/Subscribe";
 import Footer from "../components/Footer";
 import HoodiesContent from "../components/HoodiesContent";
+import Navbar from "../components/Navbar";
 
 const Hoodies = () => {
   return (

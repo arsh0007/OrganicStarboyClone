@@ -8,7 +8,6 @@ const Footer = () => {
   const footerLink = [
     { name: "Terms Of Services", link: "/terms-of-service" },
     { name: "Refund Policy", link: "/refund-policy" },
-    { name: "Privacy Policy", link: "/privacy-policy" },
   ];
 
   const socialIcon = [

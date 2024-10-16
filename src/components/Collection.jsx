@@ -105,7 +105,7 @@ const Collection = () => {
   return (
     <section className="pt-10 font-oswald">
       <h1 className="pl-4 md:pl-10 font-medium text-2xl md:text-3xl">Starboy Collection #2</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
         {products.map((product, index) => (
           <ProductCard
             key={index}
