@@ -16,11 +16,11 @@ const FAQContent = () => {
     },
     {
       qus: "How long will my order take to arrive?",
-      ans: "Depending on your location, shipping within the US will take anywhere from 6-12 business days after it has been shipped out International orders usually gets delivered within 6-14 business days after they have been shipped from us, however this varies from country to country based on your respective customs dept. (Some international orders to remote areas may take up to 20-30 business days)",
+      ans: "Depending on your location, shipping within the US will take anywhere from 6-12 business days after it has been shipped out. International orders usually get delivered within 6-14 business days after they have been shipped from us, however this varies from country to country based on your respective customs dept. (Some international orders to remote areas may take up to 20-30 business days)",
     },
     {
       qus: "How do I know what size to order?",
-      ans: "We have a size chart on the last slide of all our t-shirts, joggers and hoodies. We reccomend getting your normal size or sizing down on most of our clothes. Other than that our clothes are usually a little bigger in size than normal.",
+      ans: "We have a size chart on the last slide of all our t-shirts, joggers, and hoodies. We recommend getting your normal size or sizing down on most of our clothes. Other than that, our clothes are usually a little bigger in size than normal.",
     },
     {
       qus: "Can I cancel or make changes to my order after it is placed?",
@@ -33,13 +33,13 @@ const FAQContent = () => {
   ];
 
   return (
-    <div className="font-oswald w-1/2 m-auto pt-5">
-      <h1 className="text-7xl font-semibold">F.A.Q</h1>
-      <div className="pt-20 pb-10">
-        {FaqQuestion.map((qus, ans) => (
-          <div className="Avenir">
-            <p className="font-bold pt-6">{qus.qus}</p>
-            <p className="pt-6">{qus.ans}</p>
+    <div className="font-oswald w-full max-w-4xl mx-auto pt-5 px-4">
+      <h1 className="text-4xl md:text-6xl font-semibold text-center">F.A.Q</h1>
+      <div className="pt-10 pb-10">
+        {FaqQuestion.map((item, index) => (
+          <div key={index} className="border-b border-gray-300 pb-6">
+            <p className="font-bold text-lg md:text-xl pt-6">{item.qus}</p>
+            <p className="pt-3 text-base md:text-lg">{item.ans}</p>
           </div>
         ))}
       </div>

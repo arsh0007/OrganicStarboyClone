@@ -7,13 +7,14 @@ const TrackOrderContent = () => {
   function updateToggle(id) {
     setToggle(id);
   }
+
   return (
-    <section className=" mb-20 w-1/3 m-auto text-center">
-      <h1 className="text-4xl font-oswald font-bold">Track Your Order</h1>
+    <section className="mb-20 w-11/12 sm:w-3/4 md:w-1/3 m-auto text-center">
+      <h1 className="text-3xl sm:text-6xl font-oswald font-bold">Track Your Order</h1>
 
       <div className="mt-10">
         <div className="mt-5">
-          <ul className="text-xl p-2 flex justify-around">
+          <ul className="text-lg sm:text-xl p-2 flex justify-around">
             <li
               className="Avenir hover:border-b-black cursor-pointer border-b-2"
               onClick={() => updateToggle(1)}
@@ -33,15 +34,15 @@ const TrackOrderContent = () => {
           <div className="mt-5 flex flex-col w-full m-auto">
             <input
               className="pl-4 p-4 m-2 border-black border"
-              type="mobile"
+              type="text"
               placeholder="Order Number"
             />
             <input
-              className=" pl-4 p-4 m-2 border-black border"
+              className="pl-4 p-4 m-2 border-black border"
               type="email"
               placeholder="Email"
             />
-            <button className="text-white font-bold bg-gray-500 m-2 p-2 border  border-black hover:bg-myGreen font-">
+            <button className="text-white font-bold bg-gray-500 m-2 p-2 border border-black hover:bg-myGreen">
               Track
             </button>
           </div>
@@ -51,10 +52,10 @@ const TrackOrderContent = () => {
           <div className="mt-5 flex flex-col w-full m-auto">
             <input
               className="pl-4 p-4 m-2 border-black border"
-              type="mobile"
+              type="text"
               placeholder="Tracking Number"
             />
-            <button className="text-white m-2 p-2 border font-bold bg-gray-500 border-black hover:bg-myGreen font-">
+            <button className="text-white m-2 p-2 border font-bold bg-gray-500 border-black hover:bg-myGreen">
               Track
             </button>
           </div>

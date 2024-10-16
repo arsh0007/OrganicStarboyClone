@@ -45,7 +45,6 @@ const Collection = () => {
       title: "L'exposition Hoodie",
       price: "69.99",
     },
-
     {
       image: image7,
       hoverImage: image8,
@@ -64,7 +63,6 @@ const Collection = () => {
       title: "High Altitude Club T-Shirt",
       price: "34.99",
     },
-
     {
       image: image13,
       hoverImage: image14,
@@ -83,7 +81,6 @@ const Collection = () => {
       title: "High Altitude Club Joggers",
       price: "44.99",
     },
-
     {
       image: image19,
       hoverImage: image20,
@@ -107,8 +104,8 @@ const Collection = () => {
 
   return (
     <section className="pt-10 font-oswald">
-      <h1 className="pl-10 font-medium text-3xl">Starboy Collection #2</h1>
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 p-6">
+      <h1 className="pl-4 md:pl-10 font-medium text-2xl md:text-3xl">Starboy Collection #2</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 md:p-6">
         {products.map((product, index) => (
           <ProductCard
             key={index}
@@ -119,8 +116,8 @@ const Collection = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center">
-        <button className="font-Lato bg-myGreen border-none p-2 px-8">
+      <div className="flex justify-center mt-6">
+        <button className="font-lato bg-myGreen text-white rounded-lg py-2 px-8">
           View all
         </button>
       </div>

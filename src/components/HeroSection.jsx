@@ -16,27 +16,31 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-80 md:h-screen overflow-hidden">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {slides.map((slide, index) => (
           <div key={index} className="min-w-full h-full relative">
-            <img src={slide} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+            <img
+              src={slide}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
       </div>
       <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2 px-4">
         <button
           onClick={handlePrev}
-          className="bg-gray-800 text-white p-2 rounded-lg hover:bg-gray-700"
+          className="bg-gray-800 text-white p-2 md:p-4 rounded-lg hover:bg-gray-700"
         >
           ‹
         </button>
         <button
           onClick={handleNext}
-          className="bg-gray-800 text-white p-2 rounded-lg hover:bg-gray-700"
+          className="bg-gray-800 text-white p-2 md:p-4 rounded-lg hover:bg-gray-700"
         >
           ›
         </button>

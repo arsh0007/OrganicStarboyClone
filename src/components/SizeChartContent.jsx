@@ -11,13 +11,13 @@ const SizeChartContent = () => {
   ];
 
   return (
-    <div className="font-oswald w-1/2 m-auto pt-5">
-      <h1 className="text-7xl font-semibold">Size Charts</h1>
-      <div className="pt-20 pb-10">
-        {sizeImage.map((para, image) => (
-          <div className="Avenir">
-            <p className="font-bold mt-10 pb-8">{para.name}</p>
-            <img src={para.image} className="w-full" width={100} height={100} alt="" />
+    <div className="font-oswald w-11/12 sm:w-3/4 md:w-1/2 m-auto pt-5">
+      <h1 className="text-4xl md:text-7xl font-semibold">Size Charts</h1>
+      <div className="pt-10 pb-10">
+        {sizeImage.map((para, index) => (
+          <div className="Avenir" key={index}>
+            <p className="font-bold mt-5 text-lg md:text-2xl pb-3">{para.name}</p>
+            <img src={para.image} className="w-full h-auto" alt={para.name} />
           </div>
         ))}
       </div>
