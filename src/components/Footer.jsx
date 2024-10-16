@@ -18,11 +18,13 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full m-auto pt-12">
-      <div className="text-center">
+    <div className="w-full m-auto pt-12 px-4">
+      {/* Footer Links */}
+      <div className="text-center flex flex-col md:flex-row md:justify-center">
         {footerLink.map((link, index) => (
           <Link
-            className="font-Lato hover:border-b-2 transition-all duration-300 ease-in-out border-gray-800 m-3"
+            key={index} // Add a key prop to each mapped element
+            className="font-Lato hover:border-b-2 transition-all duration-300 ease-in-out border-gray-800 m-2 md:m-3"
             to={link.link}
           >
             {link.name}
@@ -30,11 +32,13 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="w-full m-auto pt-14 pb-14">
-        <div className="justify-center flex flex-row ">
+      {/* Social Icons */}
+      <div className="w-full m-auto pt-8 pb-4">
+        <div className="flex justify-center space-x-4">
           {socialIcon.map((icon, index) => (
             <Link
-              className="font-Lato hover:transition-all duration-300 ease-in-out m-3"
+              key={index} // Add a key prop to each mapped element
+              className="font-Lato hover:transition-all duration-300 ease-in-out m-3 text-2xl"
               to={icon.link}
             >
               {icon.name}
@@ -42,9 +46,12 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <hr />
-      <div className="font-Lato text-center pt-14 pb-14">
-            <p className="text-xs">&copy; 2024, Organic Starboy</p>
+
+      <hr className="border-gray-300 my-4" />
+
+      {/* Copyright */}
+      <div className="font-Lato text-center pt-4 pb-14">
+        <p className="text-xs md:text-sm">&copy; 2024, Organic Starboy</p>
       </div>
     </div>
   );

@@ -57,7 +57,7 @@ const JoggerContent = () => {
   return (
     <section className="pt-10 font-oswald">
       
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 md:p-6">
         {products.map((product, index) => (
           <ProductCard
             key={index}
@@ -67,9 +67,6 @@ const JoggerContent = () => {
             price={product.price}
           />
         ))}
-      </div>
-      <div className="flex justify-center">
-        <button className="font-Lato bg-myGreen border-none p-2 px-8">View all</button>
       </div>
     </section>
   )
