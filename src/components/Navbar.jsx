@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-myGreen text-xl">
+      <div className="bg-myGreen font-oswald text-xl">
         <h1 className="py-2 text-center font-medium">
           INTERNATIONAL SHIPPING - FREE OVER $120
         </h1>
@@ -71,12 +71,12 @@ const Navbar = () => {
             </div>
 
             {/* Logo (Centered on mobile, left-aligned on desktop) */}
-            <div className="flex-1 md:flex-none md:text-left text-center">
+            <div className=" pl-5 flex-1 md:flex-none md:text-left text-center pr-10">
               <Link to="/">
                 <img
                   src={logo}
                   alt="Logo"
-                  className="inline-flex items-center py-5 px-2 text-black w-40 md:w-35"
+                  className="inline-flex items-center py-5 px-2 text-black w-44 md:w-35"
                 />
               </Link>
             </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
             {/* Primary Nav (Hidden on mobile, visible on larger screens) */}
             <div className=" list-none hidden md:flex items-center space-x-4">
               {navLinks.map((item, index) => (
-                <li key={index} className=" list-none relative group">
+                <li key={index} className=" px-1 list-none relative group">
                   {item.hasDropdown ? (
                     <>
                       <button
