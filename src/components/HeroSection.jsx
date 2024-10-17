@@ -16,50 +16,54 @@ const HeroSlider = () => {
   };
 
   return (
-    <section className="relative w-full h-60 sm:h-80 md:h-[60vh] lg:h-[80vh] xl:h-screen overflow-hidden">
-      <div
-        className="flex transition-transform duration-500 ease-in-out"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className="w-full h-full flex-shrink-0 relative">
-            <img
-              src={slide}
-              alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover "
-            />
-          </div>
-        ))}
-      </div>
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="relative w-full h-full sm:h-full md:h-full lg:h-full xl:h-full overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="w-full h-full flex-shrink-0">
+              <img
+                src={slide}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2 px-4 sm:px-8">
+      {/* Button Section */}
+      <section className="w-full flex justify-center items-center gap-6">
         <button
           onClick={handlePrev}
-          className="bg-gray-800 text-white p-1 sm:p-2 md:p-3 lg:p-4 rounded-lg hover:bg-gray-700 focus:outline-none"
+          className="text-black p-2 sm:p-3 md:p-4  focus:outline-none"
         >
           ‹
         </button>
+
+        {/* Indicator Dots */}
+        <div className="flex justify-center gap-4">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 md:w-2 md:h-2 rounded-full ${index === currentSlide ? "bg-black" : "border border-black"
+                }`}
+            ></button>
+          ))}
+        </div>
+
         <button
           onClick={handleNext}
-          className="bg-gray-800 text-white p-1 sm:p-2 md:p-3 lg:p-4 rounded-lg hover:bg-gray-700 focus:outline-none"
+          className="text-black p-2 sm:p-3 md:p-4  focus:outline-none"
         >
           ›
         </button>
-      </div>
-
-      {/* Optional indicator dots */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${
-              index === currentSlide ? "bg-gray-800" : "bg-gray-400"
-            }`}
-          ></button>
-        ))}
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
